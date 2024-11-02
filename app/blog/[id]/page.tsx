@@ -11,7 +11,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function Post({ params }: { params: { id: string } }) {
+export default async function Post({ params }: { params: Promise<any> }) {
   let post;
 	const { id } = await params
   try {
