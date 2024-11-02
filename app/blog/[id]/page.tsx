@@ -3,7 +3,6 @@ import { getPostData, getSortedPostsData } from '@/lib/posts'
 import { format, parseISO } from 'date-fns'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { log } from 'console'
 
 export async function generateStaticParams() {
   const posts = getSortedPostsData()
