@@ -5,7 +5,11 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/fmb-app',
+  reactStrictMode: true,
+  swcMinify: true,
+  experimental: {
+    optimizeCss: true
+  }
 };
 
 export default nextConfig;
