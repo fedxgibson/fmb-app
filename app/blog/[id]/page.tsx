@@ -3,6 +3,7 @@ import { getPostData, getSortedPostsData } from '@/lib/posts'
 import { format, parseISO } from 'date-fns'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import { log } from 'console'
 
 export async function generateStaticParams() {
   const posts = getSortedPostsData()
@@ -17,6 +18,8 @@ export default async function Post({ params }: { params: { id: string } }) {
   try {
     post = await getPostData(id)
   } catch (error) {
+    console.log(error);
+    
     notFound()
   }
 

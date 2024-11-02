@@ -16,7 +16,7 @@ export type Post = {
   date: string
   excerpt: string
   author?: string
-  content?: any
+  content?: string
 }
 
 export function getSortedPostsData() {
